@@ -29,7 +29,7 @@ jobs:
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
-        args: --cache-control "max-age=31536000" --delete
+        args: --delete
         bucket: ${{ secrets.S3_BUCKET_NAME }}
         region: ${{ secrets.AWS_REGION }}
         source_dir: build
